@@ -88,6 +88,7 @@ export default class AddInventory extends Component{
         this.setState({
             products: this.state.products
         });
+        axios.post('http://localhost:5000/products', newProduct);
         //console.log(products);
     }
     // increment qty value by 1
