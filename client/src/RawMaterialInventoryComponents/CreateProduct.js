@@ -88,7 +88,7 @@ export default class AddInventory extends Component{
         this.setState({
             products: this.state.products
         });
-        axios.post('http://localhost:5000/products', newProduct);
+        //axios.post('http://localhost:5000/products', newProduct);
         //console.log(products);
     }
     // increment qty value by 1
@@ -128,7 +128,7 @@ export default class AddInventory extends Component{
                         <Form.Control type="number" placeholder="How many: qty" name="reOrderQty" />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" >
+                    <Button variant="secondary" type="submit" >
                         Add to Inventory
             </Button>
                 </Form>
@@ -139,6 +139,7 @@ export default class AddInventory extends Component{
                             <th>Index</th>
                             <th>Product Name:</th>
                             <th>Qty</th>
+                            <th>reOrderQty</th>
                             <th>Options</th>
                         </tr>
                     </thead>
@@ -150,6 +151,7 @@ export default class AddInventory extends Component{
                                         <td>{index+1}</td>
                                         <td>{item.product_name}</td>
                                         <td>{item.qty}</td>
+                                        <td>{item.reOrderQty}</td>
                                         <td>
                                             <Button variant="success" onClick={event => this.increQty(event)} value={index}>+</Button>
                                             <Button variant="danger" onClick={event => this.decreQty(event)} value={index}>-</Button>

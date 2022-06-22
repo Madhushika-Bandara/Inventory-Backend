@@ -6,7 +6,7 @@ const createError = require('http-errors');
 module.exports = {
     getAllProducts:async (req,res,next) => {
         try{
-            const results = await Product.find({},{name:1,qty:1});
+            const results = await Product.find({},{name:1,qty:1,reOrderQty:1});
             res.send(results);
     
         }catch(error){
