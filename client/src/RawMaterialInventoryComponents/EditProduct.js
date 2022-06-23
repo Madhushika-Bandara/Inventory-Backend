@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
 const EditProduct = () => {
@@ -66,9 +66,9 @@ const EditProduct = () => {
           }}
         />
       </Form.Group>
-      <button variant="primary" type="submit">
+      <Button variant="secondary" type="submit">
         Update
-      </button>
+      </Button>
     </Form>
   );
 };

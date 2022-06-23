@@ -1,11 +1,10 @@
-import React from "react";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+// import React from "react";
+// import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+// const Layout = () => {
+//     return (
+//         console.log("")
+//      );
+// }
 
-const Layout = () => {
-    return ( 
-        console.log("")
-     );
-}
- 
-export default Layout;
+// export default Layout;
