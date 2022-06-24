@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table, Button } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import DeleteProduct from "./DeleteProduct";
 const Product = () => {
   // const [name ,setName] =useState()
   // const [quantity,setQuantity] =useState()
@@ -49,11 +50,16 @@ const Product = () => {
                 </td>
               </Link>
 
-              {/*<Link to={`/delete/${item._id}`}>
-                <td>
-                  <Button variant="secondary">Delete</Button>
-                </td>
-          </Link>*/}
+              <td>
+                <Button
+                  variant="secondary"
+                  onClick={(e) => {
+                    DeleteProduct(item._id, e);
+                  }}
+                >
+                  Delete
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>
